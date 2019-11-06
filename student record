@@ -7,3 +7,7 @@ class studentRecords:
   self.rollNo=int(input("Enter RollNo:"))
   self.coursecode=int(input("Enter Coursecode:"))
   self.stname=input("Enter name")
+  def displaydata(self):
+  print("rollno\t",self.roll_no)
+  print("Name\t",self.stname)
+  print("Phone\t",self.coursecode)
