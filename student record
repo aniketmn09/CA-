@@ -1,0 +1,9 @@
+class studentRecords:
+  roll_no=0
+  coursecode=""
+  stname=""
+  StudList=[]
+  def addData(self):
+  self.rollNo=int(input("Enter RollNo:"))
+  self.coursecode=int(input("Enter Coursecode:"))
+  self.stname=input("Enter name")
