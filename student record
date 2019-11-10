@@ -4,11 +4,21 @@ class Student:
         self.s_name = s_name
         self.s_coursecode = s_coursecode
         
+    def showrecord(self):
+        print(self.s_id,end='\t\t')
+        print(self.s_name,end='\t\t')
+        print(self.s_coursecode)
+        
 record = []    
 n = int(input('Enter no of students'))
 for i in range (n):
-    s_id = int(input("Enter Student Id"))
+    s_id = input("Enter Student Id")
+    while (not len(s_id) == 8):
+        print("Please Enter 8 digit ID")
+        s_id = input("Enter Student Id")
     s_name = input("Enter Student Name ")
     s_coursecode = input("Enter Student Coursecode")
+    record.append(Student(s_id,s_name,s_coursecode))
 
-record.append(Student(s_id,s_name,s_coursecode))
+for i in range(n):
+    record[i].showrecord()
