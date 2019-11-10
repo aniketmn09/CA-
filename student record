@@ -18,6 +18,9 @@ for i in range (n):
         s_id = input("Enter Student Id")
     s_name = input("Enter Student Name ")
     s_coursecode = input("Enter Student Coursecode")
+    while (not len(s_coursecode) == 7):
+        print("Please Enter 7 digit Coursecode")
+        s_coursecode = input("Enter Student coursecode")
     record.append(Student(s_id,s_name,s_coursecode))
 
 for i in range(n):
