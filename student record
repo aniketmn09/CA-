@@ -6,8 +6,9 @@ class Student:
         
 record = []    
 n = int(input('Enter no of students'))
-s_id = int(input("Enter Student Id"))
-s_name = input("Enter Student Name ")
-s_coursecode = input("Enter Student Coursecode")
+for i in range (n):
+    s_id = int(input("Enter Student Id"))
+    s_name = input("Enter Student Name ")
+    s_coursecode = input("Enter Student Coursecode")
 
 record.append(Student(s_id,s_name,s_coursecode))
