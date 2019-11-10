@@ -1,13 +1,13 @@
-class studentRecords:
-  roll_no=0
-  coursecode=""
-  stname=""
-  StudList=[]
-  def addData(self):
-  self.rollNo=int(input("Enter RollNo:"))
-  self.coursecode=int(input("Enter Coursecode:"))
-  self.stname=input("Enter name")
-  def displaydata(self):
-  print("rollno\t",self.roll_no)
-  print("Name\t",self.stname)
-  print("Phone\t",self.coursecode)
+class Student:
+    def __init__(self,s_id,s_name,s_coursesode):
+        self.s_id = s_id
+        self.s_name = s_name
+        self.s_coursecode = s_coursecode
+        
+record = []    
+n = int(input('Enter no of students'))
+s_id = int(input("Enter Student Id"))
+s_name = input("Enter Student Name ")
+s_coursecode = input("Enter Student Coursecode")
+
+record.append(Student(s_id,s_name,s_coursecode))
