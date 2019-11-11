@@ -9,6 +9,15 @@ class Student:
         print(self.s_name,end='\t\t')
         print(self.s_coursecode)
         
+class Dataoperation:
+    def quicksort(self,s_id):
+        if len(s_id) == 1 or len(s_id) == 0:
+            return s_id
+        else:
+            pivot = s_id[0]
+            i = 0
+
+        
 record = []    
 n = int(input('Enter no of students'))
 for i in range (n):
