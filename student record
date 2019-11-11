@@ -10,27 +10,41 @@ class Student:
         print(self.s_coursecode)
         
 class Dataoperation:
-    def quicksort(self,s_id):
-        if len(s_id) == 1 or len(s_id) == 0:
-            return s_id
+    def quicksort(self,record):
+        if len(record) == 1 or len(record) == 0:
+            return record
         else:
-            pivot = s_id[0]
+            pivot = record[0]
             i = 0
+        for j in range(len(record)-1):
+            if record[j+1] < pivot:
+                record[j+1],record[i+1] = record[i+1], record[j+1]
+                i += 1
+        record[0],record[i] = record[i],record[0]
+        first_part = quicksort(record[:i])
+        second_part = quicksort(record[i+1:])
+        first_part.append(record[i])
+        return first_part + second_part
+        
 
         
 record = []    
-n = int(input('Enter no of students'))
+n = int(input('Enter total no of students'))
 for i in range (n):
-    s_id = input("Enter Student Id")
+    s_id = input("Enter Id")
     while (not len(s_id) == 8):
-        print("Please Enter 8 digit ID")
+        print("Enter 8 digit ID only")
         s_id = input("Enter Student Id")
-    s_name = input("Enter Student Name ")
-    s_coursecode = input("Enter Student Coursecode")
+    s_name = input("Enter Name ")
+    s_coursecode = input("Enter Coursecode")
     while (not len(s_coursecode) == 7):
         print("Please Enter 7 digit Coursecode")
-        s_coursecode = input("Enter Student coursecode")
+        s_coursecode = input("Enter coursecode")
     record.append(Student(s_id,s_name,s_coursecode))
 
 for i in range(n):
     record[i].showrecord()
+    
+for i in range(n):
+    record[i].Dataoperation()
+    
